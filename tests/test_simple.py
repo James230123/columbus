@@ -13,7 +13,7 @@ import uiautomator2 as u2
 
 @pytest.mark.skip("not working")
 def test_toast_get_message(sess: u2.Device):
-    print("111")
+    print("mayun")
     d = sess
     assert d.toast.get_message(0) is None
     assert d.toast.get_message(0, default="d") == "d"
