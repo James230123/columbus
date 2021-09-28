@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.youzan</groupId>
+		<artifactId>cloud-parent</artifactId>
+		<version>1.0.2-RELEASE</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.youzan.cloud</groupId>
+	<artifactId>pass-support</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>pass-support</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<extension-point-api.version>1.1.3.42</extension-point-api.version>
+		<youzan-api-rpc.version>2.0.0-RELEASE</youzan-api-rpc.version>
+		<mybatis.version>3.4.1</mybatis.version>
+		<mysql.version>5.1.44</mysql.version>
+		<lombok.version>1.18.4</lombok.version>
+	</properties>
+
+	<modules>
+		<module>pass-support-api</module>
+		<module>pass-support-deploy</module>
+		<module>pass-support-biz</module>
+		<module>pass-support-dal</module>
+		<module>pass-support-web</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.youzan.cloud</groupId>
+				<artifactId>open-sdk-core</artifactId>
+				<version>1.0.7-RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.youzan.cloud</groupId>
+				<artifactId>open-sdk-gen</artifactId>
+				<version>1.0.7.50942202101071603-RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.youzan.cloud</groupId>
+				<artifactId>extension-point-api</artifactId>
+				<version>${extension-point-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.youzan.boot</groupId>
+				<artifactId>youzan-api-rpc</artifactId>
+				<version>${youzan-api-rpc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+
+				<groupId>com.youzan.cloud.boot</groupId>
+
+				<artifactId>cloud-boot-dependencies</artifactId>
+
+				<version>2.0.2-RELEASE</version>
+
+				<type>pom</type>
+
+				<scope>import</scope>
+
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
